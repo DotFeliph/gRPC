@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package users;
+
+service UserService {
+  rpc GetUser (UserRequest) returns (UserResponse);
+  rpc UpdateUser (UpdateRequest) returns (UpdateResponse);
+}
+
+message UserRequest {
+  int32 id = 1;
+}
+
+message UpdateRequest {
+  int32 id = 1;
+  string biography = 2;
+}
+
+message UpdateResponse {
+  bool success = 1;
+}
+
+message UserResponse {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+  string phone = 4;
+  string address = 5;
+  string city = 6;
+  string state = 7;
+  string country = 8;
+  string zipcode = 9;
+  string company = 10;
+  string job_title = 11;
+  string biography = 12;
+  string preferences = 13;
+  string metadata = 14;
+  string notes = 15;
+}
