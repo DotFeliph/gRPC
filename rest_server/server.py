@@ -15,10 +15,20 @@ users_db = {
         "zipcode": "20000-000",
         "company": "Open Systems",
         "job_title": "Software Engineer",
-        "biography": "A" * 5000,
-        "preferences": "dark_mode=true;notifications=true;" * 100,
-        "metadata": "metadata_example_" * 200,
-        "notes": "important_notes_" * 300,
+        "biography": "A" * 300,
+        "preferences": "dark_mode=true;notifications=true;" * 5,
+        "metadata": "metadata_example_" * 5,
+        "notes": "important_notes_" * 5,
+        "age": 28,
+        "followers_count": 1247,
+        "following_count": 389,
+        "posts_count": 2341,
+        "reputation_score": 4.7,
+        "is_active": True,
+        "is_verified": False,
+        "is_premium": True,
+        "created_at": 1714000000,
+        "updated_at": 1714500000,
     },
     2: {
         "id": 2,
@@ -32,10 +42,20 @@ users_db = {
         "zipcode": "01000-000",
         "company": "Tech Corp",
         "job_title": "Data Analyst",
-        "biography": "B" * 5000,
-        "preferences": "light_mode=false;notifications=false;" * 100,
-        "metadata": "other_metadata_" * 200,
-        "notes": "secondary_notes_" * 300,
+        "biography": "B" * 300,
+        "preferences": "light_mode=false;notifications=false;" * 5,
+        "metadata": "other_metadata_" * 5,
+        "notes": "secondary_notes_" * 5,
+        "age": 35,
+        "followers_count": 8523,
+        "following_count": 142,
+        "posts_count": 891,
+        "reputation_score": 4.9,
+        "is_active": True,
+        "is_verified": True,
+        "is_premium": False,
+        "created_at": 1700000000,
+        "updated_at": 1714600000,
     },
 }
 
@@ -64,6 +84,16 @@ class User(BaseModel):
     preferences: str
     metadata: str
     notes: str
+    age: int
+    followers_count: int
+    following_count: int
+    posts_count: int
+    reputation_score: float
+    is_active: bool
+    is_verified: bool
+    is_premium: bool
+    created_at: int
+    updated_at: int
 
 
 app = FastAPI()

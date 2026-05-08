@@ -36,4 +36,14 @@ message UserResponse {
   string preferences = 13;
   string metadata = 14;
   string notes = 15;
+  int32 age = 16;
+  int32 followers_count = 17;
+  int32 following_count = 18;
+  int32 posts_count = 19;
+  float reputation_score = 20;
+  bool is_active = 21;
+  bool is_verified = 22;
+  bool is_premium = 23;
+  int64 created_at = 24;
+  int64 updated_at = 25;
 }
